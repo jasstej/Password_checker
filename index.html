@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</head>
+<body>
+    <!-- Password input field -->
+    <label for="password">Enter Password:</label>
+    <input type="password" id="password" placeholder="Enter your password">
+    
+    <!-- Display area for hash values -->
+    <div>
+        <h3>Hashes:</h3>
+        <p><strong>SHA-256:</strong> <span id="sha256-hash">N/A</span></p>
+        <p><strong>MD5:</strong> <span id="md5-hash">N/A</span></p>
+    </div>
+
+    <div>
+        <h3>Password Analysis:</h3>
+        <p><strong>Entropy:</strong> <span id="entropy">N/A</span></p>
+        <p><strong>Estimated Cracking Time:</strong> <span id="cracking-time">N/A</span></p>
+    </div>
+
+    <div>
+        <h3>Password Requirements:</h3>
+        <ul id="password-feedback" style="color: red;">
+            <!-- Feedback will be dynamically updated -->
+        </ul>
+    </div>
+
+    <!-- Include JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
