@@ -8,49 +8,57 @@
     <link href="style.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </head>
-<body class="container py-5">
-    <h1 class="text-center mb-4">Password Checker</h1>
+<body>
+    <canvas class="matrix"></canvas>
+    <div class="container py-5">
+        <h1>Password Checker</h1>
 
-    <div class="mb-3">
-        <label for="password" class="form-label">Enter Password:</label>
-        <input type="password" id="password" class="form-control" placeholder="Enter your password">
-    </div>
+        <div class="mb-4">
+            <label for="password" class="form-label">Enter Password:</label>
+            <input type="password" id="password" class="form-control" placeholder="Enter your password">
+        </div>
 
-    <div class="mb-3">
-        <button id="generate-password" class="btn btn-primary">Generate Strong Password</button>
-    </div>
+        <div class="mb-4 text-center">
+            <button id="generate-password" class="btn btn-primary">Generate Strong Password</button>
+        </div>
 
-    <div class="mb-3">
-        <h3>Hashes:</h3>
-        <p><strong>SHA-256:</strong> <span id="sha256-hash">N/A</span> <button id="copy-sha256" class="btn btn-sm btn-secondary">Copy</button></p>
-        <p><strong>MD5:</strong> <span id="md5-hash">N/A</span> <button id="copy-md5" class="btn btn-sm btn-secondary">Copy</button></p>
-    </div>
+        <div class="mb-4">
+            <h3>Hashes:</h3>
+            <p><strong>SHA-256:</strong> <span id="sha256-hash">N/A</span> <button id="copy-sha256" class="btn btn-sm btn-secondary">Copy</button></p>
+            <p><strong>MD5:</strong> <span id="md5-hash">N/A</span> <button id="copy-md5" class="btn btn-sm btn-secondary">Copy</button></p>
+        </div>
 
-    <div class="mb-3">
-        <h3>Password Analysis:</h3>
-        <p><strong>Entropy:</strong> <span id="entropy">N/A</span></p>
-        <p><strong>Estimated Cracking Time:</strong> <span id="cracking-time">N/A</span></p>
-        <progress id="strength-meter" class="w-100" max="1" value="0"></progress>
-    </div>
+        <div class="mb-4">
+            <h3>Password Analysis:</h3>
+            <p><strong>Entropy:</strong> <span id="entropy">N/A</span></p>
+            <p><strong>Estimated Cracking Time:</strong> <span id="cracking-time">N/A</span></p>
+            <progress id="strength-meter" class="w-100" max="1" value="0"></progress>
+        </div>
 
-    <div class="mb-3">
-        <h3>Password Requirements:</h3>
-        <ul id="password-feedback" class="list-unstyled">
-            <!-- Feedback will be dynamically updated -->
-        </ul>
-    </div>
+        <div class="mb-4">
+            <h3>Password Requirements:</h3>
+            <ul id="password-feedback" class="list-unstyled">
+                <!-- Feedback will be dynamically updated -->
+            </ul>
+        </div>
 
-    <div class="mb-3">
-        <h3>Improvement Suggestions:</h3>
-        <ul id="improvement-suggestions" class="list-unstyled">
-            <!-- Suggestions will be dynamically updated -->
-        </ul>
-    </div>
+        <div class="mb-4">
+            <h3>Improvement Suggestions:</h3>
+            <ul id="improvement-suggestions" class="list-unstyled">
+                <!-- Suggestions will be dynamically updated -->
+            </ul>
+        </div>
 
-    <div class="mb-3">
-        <p id="banned-warning" class="text-danger"></p>
+        <div class="mb-4">
+            <p id="banned-warning" class="text-danger"></p>
+        </div>
+
+        <footer>
+            <p>© 2023 Password Checker. All rights reserved.</p>
+        </footer>
     </div>
 
     <script type="module" src="script.js"></script>
+    <script src="matrix.js"></script>
 </body>
 </html>
