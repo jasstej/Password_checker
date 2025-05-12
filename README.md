@@ -20,7 +20,7 @@ Password Checker is a web application designed to help users evaluate the streng
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Password_checker.git
+   git clone https://github.com/jasstej/Password_checker.git
    cd Password_checker
    ```
 
@@ -74,6 +74,5 @@ For any questions or suggestions, feel free to contact the author via GitHub.
 
 ## Contact
 
-- **Author**: Your Name
-- **GitHub**: [your-username](https://github.com/your-username)
-- **Email**: your-email@example.com
+- **Author**: Jasstej Singh Marwaha
+- **GitHub**: [Jasstej](https://github.com/jasstej)
